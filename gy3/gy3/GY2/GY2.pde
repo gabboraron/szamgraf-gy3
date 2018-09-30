@@ -2,18 +2,18 @@
 ArrayList<Shape> shapes = new ArrayList<Shape>();
 Shape selected_shape = null;
 
-Rectangle rectangle = new Rectangle();
-  Circle circle = new Circle();
+  Rectangle rectangle = new Rectangle(); //mozgó téglalap a sarokban
+  Circle circle = new Circle();  //bolygók
   //SinWawe wawe = new SinWawe();
   
 void setup() {
   size(800, 600);
-  Rectangle r = new Rectangle();
+  Rectangle r = new Rectangle();  //téglalap a játéktér közepén
   r.position.x = 300;
   r.position.y = 300;
   
 
-    Circle c = new Circle();
+    Circle c = new Circle();  //kör a sarokban
     c.position.x = 600;
     c.position.y = 400;
   
@@ -38,7 +38,7 @@ void draw() {
     //rotate(-PI);
     translate(100, 100);
     scale(sin(millis()/1000.0f), cos(millis()/1000.0f));  //téglalap forgatás
-    rectangle.Draw();
+    rectangle.Draw();  //téglalap forgatása, mozgatása 3D illuzó keltése
   popMatrix();
   
   //bolygórendszer az egér köré
